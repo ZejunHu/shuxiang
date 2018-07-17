@@ -55,6 +55,17 @@
     scale: 0.3,
     distance: '0px'
   }, 300);
+  sr.reveal('.sr-image-left', {
+    origin: 'left',
+    duration: 600,
+    distance: '8rem'
+  }, 600);
+  sr.reveal('.sr-image-right', {
+    origin: 'right',
+    duration: 600,
+    delay: 1200,
+    distance: '8rem'
+  }, 300);
 
   // Magnific popup calls
   $('.popup-gallery').magnificPopup({

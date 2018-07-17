@@ -43,7 +43,7 @@ h6 {
 }
 
 .bg-dark {
-  background-color: #212529 !important;
+  background-color: #1E201E !important;
 }
 
 .text-faded {
@@ -235,6 +235,127 @@ header.masthead .carousel-caption {
   header.masthead h1 {
     font-size: 3rem;
     letter-spacing: 1px;
+  }
+}
+
+section.about .about-text .about-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: #1E201E;
+  letter-spacing: 3px;
+  text-align: center;
+  font-size: 31px;
+  line-height: 34px;
+}
+
+section.about .about-text .about-sub-heading {
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  color: #F15A48;
+  letter-spacing: 0.5px;
+  font-size: 20px;
+  text-align: center;
+}
+
+section.about .about-text .about-content {
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  color: #1E201E;
+  letter-spacing: 0.3px;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+@media (min-width: 576px) {
+  section.about .about-text .about-content {
+    margin-top: 2rem;
+  }
+}
+
+section.about .about-image .about-image--left-top {
+  margin-bottom: 6px;
+}
+
+section.about .about-image .about-image--left-bottom {
+  margin-top: 6px;
+}
+
+@media (min-width: 375px) {
+  section.about .about-image .about-image--left-top {
+    margin-bottom: 9px;
+  }
+  section.about .about-image .about-image--left-bottom {
+    margin-top: 9px;
+  }
+}
+
+@media (min-width: 768px) {
+  section.about .about-image .about-image--left-top {
+    margin-bottom: 13px;
+  }
+  section.about .about-image .about-image--left-bottom {
+    margin-top: 13px;
+  }
+}
+
+@media (min-width: 992px) {
+  section.about .about-text .about-heading {
+    text-align: left;
+    padding-right: 8rem;
+  }
+  section.about .about-text .about-sub-heading {
+    text-align: left;
+  }
+  section.about .about-image {
+    margin: 1rem 0;
+  }
+  section.about .about-image .about-image--left-top {
+    margin-bottom: 9px;
+  }
+  section.about .about-image .about-image--left-bottom {
+    margin-top: 8px;
+  }
+}
+
+@media (min-width: 1200px) {
+  section.about .about-text {
+    margin-top: 2rem;
+  }
+  section.about .about-text .about-heading {
+    padding-right: 16rem;
+  }
+  section.about .about-text .about-content {
+    padding-right: 5rem;
+  }
+  section.about .about-image {
+    margin: 1rem 0;
+  }
+  section.about .about-image .about-image--left-top {
+    margin-bottom: 11px;
+  }
+  section.about .about-image .about-image--left-bottom {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 1500px) {
+  section.about .about-text {
+    margin-top: 3rem;
+  }
+  section.about .about-text .about-heading {
+    padding-right: 26rem;
+  }
+  section.about .about-text .about-content {
+    padding-right: 10rem;
+  }
+  section.about .about-image {
+    margin: 1rem 0;
+  }
+  section.about .about-image .about-image--left-top {
+    margin-bottom: 12px;
+  }
+  section.about .about-image .about-image--left-bottom {
+    margin-top: 12px;
   }
 }
 
