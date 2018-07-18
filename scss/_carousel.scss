@@ -1,0 +1,49 @@
+.carousel-indicators {
+  &--round li {
+    border-radius: 10px;
+    margin: 0 0.5rem;
+    height: 10px;
+    max-width: 10px;
+    border: 1px;
+    background-color: $white;
+    opacity: 0.5;
+    cursor: pointer;
+    &:hover {
+      background-color: $primary;
+    }
+  }
+  .active {
+    background-color: $primary;
+  }
+}
+
+.carousel-inner-multiple {
+  @media (min-width: 768px) {
+    .carousel-item.active, .carousel-item-next, .carousel-item-prev {
+      display: flex;
+    }
+    .carousel-item-right.active, .carousel-item-next {
+      transform: translateX(33.33%);
+    }
+    .carousel-item-left.active, .carousel-item-prev {
+      transform: translateX(-33.33%);
+    }
+    .carousel-item-right, .carousel-item-left{
+      transform: translateX(0);
+    }
+  }
+}
+
+.carousel-control-prev-icon {
+  background-image: url("../vendor/svg/arrow-left-circle.svg");
+  &:hover {
+    background-image: url("../vendor/svg/arrow-left-circle-hover.svg");
+  }
+}
+
+.carousel-control-next-icon {
+  background-image: url("../vendor/svg/arrow-right-circle.svg");
+  &:hover {
+    background-image: url("../vendor/svg/arrow-right-circle-hover.svg");
+  }
+}

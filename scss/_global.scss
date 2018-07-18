@@ -53,7 +53,23 @@ section {
 }
 
 .section-heading {
-  margin-top: 0;
+  @include montserrat-font;
+  font-weight: bold;
+  color: $black;
+  letter-spacing: 3px;
+  text-align: center;
+  font-size: 31px;
+  line-height: 34px;
+}
+
+.section-sub-heading {
+  @include sans-serif-font;
+  font-style: italic;
+  font-weight: 600;
+  color: $primary;
+  letter-spacing: 0.5px;
+  font-size: 20px;
+  text-align: center;
 }
 
 ::-moz-selection {

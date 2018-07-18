@@ -55,15 +55,21 @@
     scale: 0.3,
     distance: '0px'
   }, 300);
-  sr.reveal('.sr-image-left', {
-    origin: 'left',
+  sr.reveal('.sr-image-top', {
+    origin: 'top',
     duration: 600,
     distance: '8rem'
-  }, 600);
+  }, 300);
+  sr.reveal('.sr-image-bottom', {
+    origin: 'bottom',
+    duration: 600,
+    delay: 300,
+    distance: '8rem'
+  }, 300);
   sr.reveal('.sr-image-right', {
     origin: 'right',
     duration: 600,
-    delay: 1200,
+    delay: 600,
     distance: '8rem'
   }, 300);
 
@@ -86,5 +92,24 @@
   $('.carousel').carousel({
     interval: 5000
   })
+
+  if ($(window).width() >= 768) {
+    $('.carousel-multiple .carousel-item-multiple').each(function(){
+      var next = $(this).next();
+      if (!next.length) {
+      next = $(this).siblings(':first');
+      }
+      next.children(':first-child').clone().appendTo($(this));
+
+      for (var i=0;i<2;i++) {
+          next=next.next();
+          if (!next.length) {
+          	next = $(this).siblings(':first');
+        	}
+
+          next.children(':first-child').clone().appendTo($(this));
+        }
+    });
+  }
 
 })(jQuery); // End of use strict

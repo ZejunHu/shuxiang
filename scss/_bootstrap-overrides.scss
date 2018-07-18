@@ -37,22 +37,3 @@
     box-shadow: 0 0 0 0.2rem rgba(240, 95, 64,.5) !important;
   }
 }
-
-.carousel-indicators {
-  &--round li {
-    border-radius: 10px;
-    margin: 0 0.5rem;
-    height: 10px;
-    max-width: 10px;
-    border: 1px;
-    background-color: $white;
-    opacity: 0.5;
-    cursor: pointer;
-    &:hover {
-      background-color: $primary;
-    }
-  }
-  .active {
-    background-color: $primary;
-  }
-}

@@ -77,11 +77,11 @@
     </header> -->
 
     <header class="masthead text-center text-white">
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <div id="carouselMastheadIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators carousel-indicators--round">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselMastheadIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselMastheadIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselMastheadIndicators" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner" role="listbox">
           <!-- Slide One - Set the background image for this slide in the line below -->
@@ -146,16 +146,16 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6 about-text">
-            <h2 class="about-heading">THIS IS WHERE IT ALL BEGINS.</h2>
+            <h2 class="section-heading about-heading">THIS IS WHERE IT ALL BEGINS.</h2>
             <hr class="light my-4">
-            <p class="about-sub-heading">The perfect place to enjory the life and food.</p>
+            <p class="section-sub-heading about-sub-heading">The perfect place to enjory the life and food.</p>
             <p class="about-content mb-4">If you're cooking your food properly on your barbeque, you're getting delightful results every time. However, SHU TA people are falling victims to very common barbeque myths. It's not because we're gullible or stupid in any way. Many barbeque myths are so well known and so wide spread that they are more frequently passed on as truth than they are as the myths that they truly are.</p>
           </div>
           <div class="col-lg-6 about-image">
             <div class="row">
               <div class="col-6 px-2">
-                <img src="/img/about-1.png" class="img-fluid about-image--left-top sr-image-left" alt="shuxiang about 1">
-                <img src="/img/about-2.png" class="img-fluid about-image--left-bottom sr-image-left" alt="shuxiang about 2">
+                <img src="/img/about-1.png" class="img-fluid about-image--left-top sr-image-top" alt="shuxiang about 1">
+                <img src="/img/about-2.png" class="img-fluid about-image--left-bottom sr-image-bottom" alt="shuxiang about 2">
               </div>
               <div class="col-6 px-2">
                 <img src="/img/about-3.png" class="img-fluid about-image--right sr-image-right" alt="shuxiang about 3">
@@ -166,47 +166,65 @@
       </div>
     </section>
 
-    <section id="services" class="bg-dark">
+    <section id="new-released" class="bg-dark new-released">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading">NEW RELEASED</h2>
-            <hr class="my-4">
+        <h2 class="section-heading new-released-heading">NEW RELEASED</h2>
+        <p class="section-sub-heading">Try our new released item and enjoy the time.</p>
+
+        <div class="container text-center my-3">
+          <div class="row mx-auto my-auto">
+              <div id="carouselNewReleased" class="carousel carousel-multiple slide w-100" data-ride="carousel">
+                <ol class="carousel-indicators carousel-indicators--round">
+                  <li data-target="#carouselNewReleased" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselNewReleased" data-slide-to="1"></li>
+                  <li data-target="#carouselNewReleased" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner carousel-inner-multiple w-100" role="listbox">
+                    <div class="carousel-item carousel-item-multiple active">
+                      <div class="d-block carousel-item-block col-md-4">
+                        <img class="img-fluid" src="/img/new-1.png">
+                        <div class="carousel-caption-text d-block">
+                          <p>SEAFOOD LINGUINE FLORENTINE</p>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="carousel-item carousel-item-multiple">
+                      <div class="d-block carousel-item-block col-md-4">
+                        <img class="img-fluid" src="/img/new-2.png">
+                        <div class="carousel-caption-text d-block">
+                          <p>CARAMEL PUDDING WITH MILK</p>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="carousel-item carousel-item-multiple">
+                      <div class="d-block carousel-item-block col-md-4">
+                        <img class="img-fluid" src="/img/new-3.png">
+                        <div class="carousel-caption-text d-block">
+                          <p>ATLANTIC FLAVOURED SOLE FISH</p>
+                        </div>
+                      </div>
+
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselNewReleased" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselNewReleased" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+              </div>
           </div>
         </div>
+
       </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">Sturdy Templates</h3>
-              <p class="text-muted mb-0">Our templates are updated regularly so they don't break.</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">Ready to Ship</h3>
-              <p class="text-muted mb-0">You can use this theme as is, or you can make changes!</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-newspaper-o text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">Up to Date</h3>
-              <p class="text-muted mb-0">We update dependencies to keep things fresh.</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-heart text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">Made with Love</h3>
-              <p class="text-muted mb-0">You have to make your websites with love these days!</p>
-            </div>
-          </div>
-        </div>
-      </div>
+    </section>
+
+    <section id="services">
+
     </section>
 
     <section class="p-0" id="portfolio">
