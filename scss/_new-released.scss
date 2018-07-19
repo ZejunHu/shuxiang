@@ -22,6 +22,7 @@ section.new-released {
       letter-spacing: 2px;
       line-height: 30px;
       color: $white;
+      cursor: pointer;
       &:hover {
         color: $primary;
       }

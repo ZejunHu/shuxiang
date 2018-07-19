@@ -433,6 +433,7 @@ section.new-released .carousel .carousel-caption-text {
   letter-spacing: 2px;
   line-height: 30px;
   color: #fff;
+  cursor: pointer;
 }
 
 section.new-released .carousel .carousel-caption-text:hover {
@@ -544,8 +545,33 @@ section.new-released .carousel .carousel-control-next .carousel-control-next-ico
   }
 }
 
-.service-box {
-  max-width: 400px;
+#special #special-menu-wide {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  #special #special-menu {
+    display: none;
+  }
+  #special #special-menu-wide {
+    display: block;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+  }
+  #special #special-menu-wide .special-show {
+    z-index: 100;
+    transform: translateZ(0px);
+  }
+  #special #special-menu-wide .special-under {
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+    transform: translateZ(-100px);
+    cursor: pointer;
+  }
+  #special #special-menu-wide .special-under:hover {
+    transform: translateZ(0px);
+  }
 }
 
 .portfolio-box {

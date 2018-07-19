@@ -41,20 +41,20 @@
 
   // Scroll reveal calls
   window.sr = ScrollReveal();
-  sr.reveal('.sr-icons', {
-    duration: 600,
-    scale: 0.3,
-    distance: '0px'
-  }, 200);
-  sr.reveal('.sr-button', {
-    duration: 1000,
-    delay: 200
-  });
-  sr.reveal('.sr-contact', {
-    duration: 600,
-    scale: 0.3,
-    distance: '0px'
-  }, 300);
+  // sr.reveal('.sr-icons', {
+  //   duration: 600,
+  //   scale: 0.3,
+  //   distance: '0px'
+  // }, 200);
+  // sr.reveal('.sr-button', {
+  //   duration: 1000,
+  //   delay: 200
+  // });
+  // sr.reveal('.sr-contact', {
+  //   duration: 600,
+  //   scale: 0.3,
+  //   distance: '0px'
+  // }, 300);
   sr.reveal('.sr-image-top', {
     origin: 'top',
     duration: 600,
@@ -89,26 +89,35 @@
     }
   });
 
-  $('.carousel').carousel({
+  $('#carouselMastheadIndicators').carousel({
     interval: 5000
+  });
+
+  $('#carouselNewReleased').carousel({
+    interval: 5000
+  });
+
+  $('#special-menu').carousel({
+    pause: true,
+    interval: false
   })
 
   if ($(window).width() >= 768) {
     $('.carousel-multiple .carousel-item-multiple').each(function(){
       var next = $(this).next();
       if (!next.length) {
-      next = $(this).siblings(':first');
+        next = $(this).siblings(':first');
       }
       next.children(':first-child').clone().appendTo($(this));
 
-      for (var i=0;i<2;i++) {
+      for (var i=0;i<1;i++) {
           next=next.next();
           if (!next.length) {
           	next = $(this).siblings(':first');
         	}
 
           next.children(':first-child').clone().appendTo($(this));
-        }
+      }
     });
   }
 
