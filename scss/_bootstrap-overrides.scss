@@ -4,8 +4,10 @@
 }
 
 .container {
-  @media (min-width: 1500px) {
-    max-width: 1400px;
+  &--large {
+    @media (min-width: 1500px) {
+      max-width: 1400px;
+    }
   }
 }
 

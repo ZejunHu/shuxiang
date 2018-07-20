@@ -143,7 +143,7 @@
     </header>
 
     <section id="about" class="about">
-      <div class="container">
+      <div class="container container--large">
         <div class="row">
           <div class="col-lg-6 about-text">
             <h2 class="section-heading about-heading">THIS IS WHERE IT ALL BEGINS.</h2>
@@ -167,11 +167,11 @@
     </section>
 
     <section id="new-released" class="bg-dark new-released">
-      <div class="container">
+      <div class="container container--large">
         <h2 class="section-heading new-released-heading">NEW RELEASED</h2>
         <p class="section-sub-heading">Try our new released item and enjoy the time.</p>
 
-        <div class="container text-center my-3">
+        <div class="container container--large text-center my-3">
           <div class="row mx-auto my-auto">
               <div id="carouselNewReleased" class="carousel carousel-multiple slide w-100" data-ride="carousel">
                 <ol class="carousel-indicators carousel-indicators--round">
@@ -225,7 +225,7 @@
 
     <section id="special">
 
-        <div class="container text-center my-3">
+        <div class="container container--large text-center my-3">
           <div class="row mx-auto my-auto">
 
               <div id="special-menu" class="carousel slide" data-ride="carousel">
@@ -278,7 +278,7 @@
 
 <!-- ...................... Menu .......................   -->
     <section id="menu">
-      <div class="container text-center">
+      <div class="container container--large text-center">
         <h2 class="section-heading text-white mb-4">WHAT'S ON OUR TABLE</h2>
         <p class="section-sub-heading">Never miss the specific type of dish you like.</p>
 
@@ -461,8 +461,58 @@
 <!-- ...................... Menu End .......................   -->
 
     <section id="contact">
-      <div class="container text-center">
+      <div class="container contact">
+        <div class="row">
+          <div class="col-md-4 contact-left p-0 text-center">
+            <div class="contact-left-info">
+              <div class="contact-left-info-block">
+                <p class="contact-left-info-block-heading">MONDAY - FRIDAY</p>
+                <p class="contact-left-info-block-text">8AM-11AM (Breakfast)</p>
+                <p class="contact-left-info-block-text">11AM-9PM (Lunch&Dinner)</p>
+              </div>
+              <div class="contact-left-info-block">
+                <p class="contact-left-info-block-heading">SATURDAY & SUNDAY</p>
+                <p class="contact-left-info-block-text">9AM-11AM (Breakfast)</p>
+                <p class="contact-left-info-block-text">11AM-10PM (Lunch&Dinner)</p>
+              </div>
+            </div>
 
+            <div class="contact-left-caption">
+              <h2 class="m-0">TIME OF THE DAY</h2>
+            </div>
+          </div>
+
+          <div class="col-md-8 p-0" id="contact-map"></div>
+
+          <div class="contact-hide-map"></div>
+
+          <div class="contact-right-window">
+            <h2 class="section-heading text-center">CONTACT US</h2>
+            <p class="section-sub-heading text-center">Tell us your specific requirement.</p>
+            <div class="contact-right-window-info">
+              <div class="contact-right-window-info-item">
+                <img src="vendor/svg/home.svg" alt="address">
+                <span>15 Cummerata Stravenue</span>
+              </div>
+              <div class="contact-right-window-info-item">
+                <img src="vendor/svg/phone-handset.svg" alt="phone number">
+                <span>+1 (647) 123 4567</span>
+              </div>
+              <div class="contact-right-window-info-item">
+                <img src="vendor/svg/envelope.svg" alt="email address">
+                <span>morar@shutaste.com</span>
+              </div>
+            </div>
+
+            <div class="contact-right-window-show-map">
+              <span>VIEW THE MAP</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 20 20">
+                <path fill="#F15A48" d="M19.354 10.146l-6-6c-0.195-0.195-0.512-0.195-0.707 0s-0.195 0.512 0 0.707l5.146 5.146h-16.293c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h16.293l-5.146 5.146c-0.195 0.195-0.195 0.512 0 0.707 0.098 0.098 0.226 0.146 0.354 0.146s0.256-0.049 0.354-0.146l6-6c0.195-0.195 0.195-0.512 0-0.707z"></path>
+              </svg>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
 
@@ -481,8 +531,11 @@
     <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSqdfEOZIg3hI9CcFJHX8q2m5gmA3uy_o"
+    async defer></script>
+
     <!-- Custom scripts for this template -->
-    <script src="js/creative.min.js"></script>
+    <script src="js/creative.min.js" async defer></script>
 
   </body>
 
