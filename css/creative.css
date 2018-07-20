@@ -948,6 +948,66 @@ section.new-released .carousel .carousel-control-next .carousel-control-next-ico
   }
 }
 
+footer {
+  padding-top: 4rem;
+}
+
+footer .footer-block {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+footer .footer-block .footer-block-heading {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 30px;
+  color: #F15A48;
+}
+
+footer .footer-block .footer-block-info {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+footer .footer-copyright {
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+footer .footer-logo {
+  width: auto;
+  max-width: 100px;
+}
+
+footer .footer-social {
+  color: #fff;
+  padding: 1rem 1.6rem;
+  font-size: 1.4rem;
+  max-width: 310px;
+  margin: auto;
+}
+
+footer .footer-social .footer-social-icon {
+  cursor: pointer;
+}
+
+footer .footer-social .footer-social-icon:hover {
+  color: #F15A48;
+}
+
+@media (min-width: 768px) {
+  footer .footer-social {
+    padding: 1rem 0;
+  }
+}
+
 .text-primary {
   color: #F15A48 !important;
 }
