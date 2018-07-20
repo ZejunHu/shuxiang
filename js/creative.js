@@ -100,7 +100,21 @@
   $('#special-menu').carousel({
     pause: true,
     interval: false
-  })
+  });
+
+  $('#menu-carousel').carousel({
+    pause: true,
+    interval: false
+  });
+
+  $('.menu-tab-btn').on('click', function() {
+    var menuIndex = $(this).index();
+    $('.menu-tab-btn.active').removeClass('active');
+    $(this).addClass('active');
+
+    $('.carousel-menu-item.active').removeClass('active');
+    $('.carousel-menu-item:eq('+menuIndex+')').addClass('active');
+  });
 
   if ($(window).width() >= 768) {
     $('.carousel-multiple .carousel-item-multiple').each(function(){
