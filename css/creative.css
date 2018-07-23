@@ -206,6 +206,9 @@ img::-moz-selection {
     display: inline-block;
     max-height: 6rem;
   }
+  #mainNav .navbar-nav {
+    margin: auto;
+  }
   #mainNav .navbar-nav > li.nav-item > a.nav-link {
     padding: 4rem 4rem;
   }
@@ -220,9 +223,20 @@ img::-moz-selection {
   #mainNav .nav-item-mobile {
     display: none;
   }
+  #mainNav .nav-item-left {
+    margin-right: 120px;
+  }
+  #mainNav .nav-item-right {
+    margin-left: 120px;
+  }
   #mainNav.navbar-shrink {
     border-bottom: 1px solid rgba(33, 37, 41, 0.1);
     background-color: #1E201E;
+  }
+  #mainNav.navbar-shrink .navbar-brand {
+    position: relative;
+    left: auto;
+    transform: none;
   }
   #mainNav.navbar-shrink .navbar-brand .navbar-logo-horizontal {
     display: inline-block;
@@ -230,20 +244,38 @@ img::-moz-selection {
   #mainNav.navbar-shrink .navbar-brand .navbar-logo-vertical {
     display: none;
   }
+  #mainNav.navbar-shrink .navbar-nav {
+    margin: 0;
+    margin-left: auto;
+  }
   #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link,
   #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus {
-    padding: 1rem 4rem;
+    padding: 1rem;
     color: #fff;
   }
   #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:hover,
   #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus:hover {
     color: #F15A48;
   }
-  #mainNav .nav-item-left {
-    margin-right: 120px;
+  #mainNav.navbar-shrink .nav-item-mobile {
+    display: inline-block;
+    padding: 0.5rem 0 0 0.5rem;
   }
-  #mainNav .nav-item-right {
-    margin-left: 120px;
+  #mainNav.navbar-shrink .nav-item-mobile .nav-link {
+    padding: 0.3rem 1rem !important;
+    background-color: transparent !important;
+    border: 3px solid #F15A48 !important;
+    color: #F15A48 !important;
+  }
+  #mainNav.navbar-shrink .nav-item-mobile .nav-link:hover {
+    color: #fff !important;
+    background: #F15A48 !important;
+  }
+  #mainNav.navbar-shrink .nav-item-left {
+    margin-right: auto;
+  }
+  #mainNav.navbar-shrink .nav-item-right {
+    margin-left: auto;
   }
 }
 
@@ -303,6 +335,34 @@ header.masthead .carousel-caption {
     font-size: 3rem;
     letter-spacing: 1px;
   }
+}
+
+#scroll-to-top-btn {
+  display: none;
+  position: fixed;
+  bottom: 3.2rem;
+  right: 3rem;
+  z-index: 999;
+  border: none;
+  outline: none;
+  background-image: url("../vendor/svg/chevron-up-circle.svg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 3rem;
+  width: 3rem;
+  cursor: pointer;
+}
+
+#scroll-to-top-btn:hover {
+  background-image: url("../vendor/svg/chevron-up-circle-hover.svg");
+}
+
+#scroll-to-top-btn.active {
+  display: block;
 }
 
 section.about .about-text .about-content {
@@ -545,33 +605,20 @@ section.new-released .carousel .carousel-control-next .carousel-control-next-ico
   }
 }
 
-#special #special-menu-wide {
-  display: none;
+#special .carousel-indicators {
+  bottom: -3rem;
 }
 
-@media (min-width: 768px) {
-  #special #special-menu {
-    display: none;
-  }
-  #special #special-menu-wide {
-    display: block;
-    -webkit-perspective: 1000px;
-    perspective: 1000px;
-  }
-  #special #special-menu-wide .special-show {
-    z-index: 100;
-    transform: translateZ(0px);
-  }
-  #special #special-menu-wide .special-under {
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    transition: all 0.2s;
-    transform: translateZ(-100px);
-    cursor: pointer;
-  }
-  #special #special-menu-wide .special-under:hover {
-    transform: translateZ(0px);
-  }
+#special .carousel-indicators--round li {
+  background-color: #1E201E;
+}
+
+#special .carousel-indicators--round li:hover {
+  background-color: #F15A48;
+}
+
+#special .carousel-indicators .active {
+  background-color: #F15A48;
 }
 
 #menu {
@@ -746,15 +793,15 @@ section.new-released .carousel .carousel-control-next .carousel-control-next-ico
     left: -4rem;
   }
   #menu .carousel-control-prev .carousel-control-prev-icon {
-    height: 4rem;
-    width: 4rem;
+    height: 3rem;
+    width: 3rem;
   }
   #menu .carousel-control-next {
     right: -4rem;
   }
   #menu .carousel-control-next .carousel-control-next-icon {
-    height: 4rem;
-    width: 4rem;
+    height: 3rem;
+    width: 3rem;
   }
 }
 
@@ -948,6 +995,63 @@ section.new-released .carousel .carousel-control-next .carousel-control-next-ico
   }
 }
 
+.modal .modal-dialog .modal-content .modal-header {
+  border: none;
+  padding-bottom: 0;
+}
+
+.modal .modal-dialog .modal-content .modal-header .modal-title {
+  display: none;
+}
+
+.modal .modal-dialog .modal-content .modal-header .close {
+  margin: -5px -5px -5px auto;
+  padding: 0.8rem;
+  background-image: url("../vendor/svg/cross.svg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.modal .modal-dialog .modal-content .modal-header .close:hover {
+  background-image: url("../vendor/svg/cross-hover.svg");
+}
+
+.modal .modal-dialog .modal-content .modal-body {
+  border: none;
+}
+
+.modal .modal-dialog .modal-content .modal-body .modal-body-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 3px;
+  color: #1E201E;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+.modal .modal-dialog .modal-content .modal-body .modal-body-img {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.modal .modal-dialog .modal-content .modal-body .modal-body-info {
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #1E201E;
+}
+
+.modal .modal-dialog .modal-content .modal-body .modal-body-info:hover {
+  color: #F15A48;
+  cursor: pointer;
+}
+
 footer {
   padding-top: 4rem;
 }
@@ -1033,12 +1137,12 @@ footer .footer-social .footer-social-icon:hover {
 .btn-primary {
   background-color: transparent;
   border: 3px solid #F15A48 !important;
-  color: #F15A48;
+  color: #F15A48 !important;
   letter-spacing: 1px;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  color: #fff;
+  color: #fff !important;
   background-color: #F15A48 !important;
 }
 

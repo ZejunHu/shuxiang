@@ -39,6 +39,17 @@
   // Collapse the navbar when page is scrolled
   $(window).scroll(navbarCollapse);
 
+  // scroll to top button
+  $(window).scroll(function (event) {
+    var scroll = $(window).scrollTop();
+    $('#scroll-to-top-btn').toggleClass('active',
+     //add 'ok' class when div position match or exceeds else remove the 'ok' class.
+      scroll >= $('#about').offset().top
+    );
+  });
+  //trigger the scroll
+  $(window).scroll();//ensure if you're in current position when page is refreshed
+
   // Scroll reveal calls
   window.sr = ScrollReveal();
 
@@ -85,8 +96,7 @@
   });
 
   $('#special-menu').carousel({
-    pause: true,
-    interval: false
+    interval: 5000
   });
 
   $('#menu-carousel').carousel({
@@ -120,7 +130,49 @@
           next.children(':first-child').clone().appendTo($(this));
       }
     });
+
+    $('#special-menu .carousel-item-multiple').each(function() {
+      $('.carousel-item-special:nth-child(1) a').attr({
+        'href': '#special-menu',
+        'role': 'button',
+        'data-slide': 'prev'
+      });
+      $('.carousel-item-special:nth-child(3) a').attr({
+        'href': '#special-menu',
+        'role': 'button',
+        'data-slide': 'next'
+      });
+    });
   }
+
+//////////     For Mobile Swipe    ////////////
+  var touchStartX = null;
+
+  $('.carousel').each(function () {
+      var $carousel = $(this);
+      $(this).on('touchstart', function (event) {
+          var e = event.originalEvent;
+          if (e.touches.length == 1) {
+              var touch = e.touches[0];
+              touchStartX = touch.pageX;
+          }
+      }).on('touchmove', function (event) {
+          var e = event.originalEvent;
+          if (touchStartX != null) {
+              var touchCurrentX = e.changedTouches[0].pageX;
+              if ((touchCurrentX - touchStartX) > 60) {
+                  touchStartX = null;
+                  $carousel.carousel('prev');
+              } else if ((touchStartX - touchCurrentX) > 60) {
+                  touchStartX = null;
+                  $carousel.carousel('next');
+              }
+          }
+      }).on('touchend', function () {
+          touchStartX = null;
+      });
+    });
+//////////     For Mobile Swipe    ////////////
 
   //////////////////////// Google Map /////////////////////////////
   $(".contact-hide-map").hide();

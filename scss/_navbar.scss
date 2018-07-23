@@ -50,6 +50,9 @@
         max-height: 6rem;
       }
     }
+    .navbar-nav {
+      margin: auto;
+    }
     .navbar-nav > li.nav-item > a.nav-link {
       padding: 4rem 4rem;
     }
@@ -63,10 +66,19 @@
     .nav-item-mobile {
       display: none;
     }
+    .nav-item-left {
+      margin-right: 120px;
+    }
+    .nav-item-right {
+      margin-left: 120px;
+    }
     &.navbar-shrink {
       border-bottom: 1px solid fade-out($gray-900, .9);
       background-color: $black;
       .navbar-brand {
+        position: relative;
+        left: auto;
+        transform: none;
         .navbar-logo-horizontal {
           display: inline-block;
         }
@@ -74,20 +86,38 @@
           display: none;
         }
       }
+      .navbar-nav {
+        margin: 0;
+        margin-left: auto;
+      }
       .navbar-nav > li.nav-item > a.nav-link,
       .navbar-nav > li.nav-item > a.nav-link:focus {
-        padding: 1rem 4rem;
+        padding: 1rem;
         color: $white;
         &:hover {
           color: $primary;
         }
       }
-    }
-    .nav-item-left {
-      margin-right: 120px;
-    }
-    .nav-item-right {
-      margin-left: 120px;
+      .nav-item-mobile {
+        display: inline-block;
+        padding: 0.5rem 0 0 0.5rem;
+        .nav-link {
+          padding: 0.3rem 1rem!important;
+          background-color: transparent!important;
+          border: 3px solid $primary!important;
+          color: $primary!important;
+          &:hover {
+            color: $white!important;
+            background: $primary!important;
+          }
+        }
+      }
+      .nav-item-left {
+        margin-right: auto;
+      }
+      .nav-item-right {
+        margin-left: auto;
+      }
     }
   }
 }

@@ -1,29 +1,15 @@
 // Styling for the special section
 #special {
-  #special-menu-wide {
-    display: none;
-  }
-
-  @media (min-width: 768px) {
-    #special-menu {
-      display: none;
+  .carousel-indicators {
+    bottom: -3rem;
+    &--round li {
+      background-color: $black;
+      &:hover {
+        background-color: $primary;
+      }
     }
-    #special-menu-wide {
-      display: block;
-      -webkit-perspective: 1000px;
-      perspective: 1000px;
-      .special-show {
-        z-index: 100;
-        transform: translateZ(0px);
-      }
-      .special-under {
-        @include transition-all;
-        transform: translateZ(-100px);
-        cursor: pointer;
-        &:hover {
-          transform: translateZ(0px);
-        }
-      }
+    .active {
+      background-color: $primary;
     }
   }
 }

@@ -1,0 +1,22 @@
+#scroll-to-top-btn {
+  display: none;
+  position: fixed;
+  bottom: 3.2rem;
+  right: 3rem;
+  z-index: 999;
+  border: none;
+  outline: none;
+  background-image: url('../vendor/svg/chevron-up-circle.svg');
+  @include background-cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 3rem;
+  width: 3rem;
+  cursor: pointer;
+  &:hover {
+    background-image: url('../vendor/svg/chevron-up-circle-hover.svg');
+  }
+  &.active {
+    display: block;
+  }
+}

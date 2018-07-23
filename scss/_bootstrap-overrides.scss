@@ -26,12 +26,12 @@
 .btn-primary {
   background-color: transparent;
   border: 3px solid $primary !important;
-  color: $primary;
+  color: $primary!important;
   letter-spacing: 1px;
   &:hover,
   &:focus,
   &:active {
-    color: $white;
+    color: $white!important;
     background-color: $primary !important;
   }
   &:active,
